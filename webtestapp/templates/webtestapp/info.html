@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ja">
+
+<head>
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{% static "css/style.css" %}" />
+
+</head>
+
+<body>
+  <h1>{{ title }}</h1>
+  <p>{{ val }}</p>
+
+  <table>
+    <tr>
+      <th>.objects.all()の表示</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{ i }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p>{{ val2 }}</p>
+
+  <table>
+    <tr>
+      <th>.objects.values()の表示</th>
+    </tr>
+    {% for i2 in val2 %}
+    <tr>
+      <td>{{ i2 }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+
+</html>
